@@ -1,14 +1,15 @@
-import { getAllCharacters } from 
+import { getAllCharacters } from '..lib/api';
 import { useEffect, useState } from 'react';
+import CharactersCard from './CharactersCard';
 
 const CharactersList = () => {
-  const [characters, setCharacters] = useSate(null);
+  const [characters, setCharacters] = useState(null);
 
   useEffect(() => {
     getAllCharacters()
       .then((res) => setCharacters(res.data))
       .catch((err) => console.error(err));
-  },[]);
+  }, []);
 
   if (cheeses === null) {
     return <p>Loading...</p>;
@@ -18,13 +19,12 @@ const CharactersList = () => {
       <div className="container">
         <div className="column is-multitline">
           {characters.map((character) => (
-            <CharactersCard key={character._id} {...character} />
+            <CharactersCard key={results[0]._id} {...character} /> //need to change and reflect API
           ))}
         </div>
       </div>
     </section>
   );
-
 };
 
 export default CharactersList;

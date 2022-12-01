@@ -7,7 +7,7 @@ const CharactersList = () => {
 
   useEffect(() => {
     getAllCharacters()
-      .then((res) => console.log(res.data))
+      .then((res) => setCharacters(res.data.results))
       .catch((err) => console.error(err));
   }, []); 
 
@@ -19,7 +19,7 @@ const CharactersList = () => {
       <div className="container">
         <div className="column is-multitline">
           {characters.map((character) => (
-            <CharactersCard key={character.results.id} name={character.results.name} image={character.results.image}/>
+            <CharactersCard key={character.id} name={character.name} image={character.image}/>
             
           ))}
         </div>

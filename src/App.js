@@ -8,8 +8,8 @@ const App = () => {
     <BrowserRouter>
       <Navbar />
       <Routes>
+        <Route path="/list" element={<CharactersList />} />
         <Route path="/" element={<Home />} />
-        <Route path="/" element={<CharactersList />} />
         <Route path="*" element={<p>This is not a valid route</p>} />
       </Routes>
     </BrowserRouter>

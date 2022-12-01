@@ -18,9 +18,9 @@ const CharactersList = () => {
     <section className="section">
       <div className="container">
         <div className="column is-multitline">
-          {/* {characters.map((character) => (
-            // <CharactersCard key={character._id} {...character} />
-          ))} */}
+          {characters.map((character) => (
+            <CharactersCard key={character._id} {...character} />
+          ))}
         </div>
       </div>
     </section>

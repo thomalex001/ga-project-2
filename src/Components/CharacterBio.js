@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getCharacterBio } from '../lib/api'; //need to add this in API ==> export const getCharacterBio = (characterId) => axios.get(`${BASE_URL}/${characterId}`);
+let statusIcon;
 
 const CharacterBio = () => {
   const { id } = useParams();
@@ -13,11 +14,15 @@ const CharacterBio = () => {
       .catch((err) => console.error(err));
   }, [id]);
 
-
   if (character === null) {
     return <p>Loading...</p>;
   }
 
+  if (character.status === 'Alive') {
+    statusIcon = '🟢';
+  } else {
+    statusIcon = '☠️';
+  }
 
   return (
     <section className="section">
@@ -32,31 +37,40 @@ const CharacterBio = () => {
           </div>
           <div className="column is-half">
             <h4 className="title is-4">
-              <span role="img" aria-label="status-icon"> {/* it would be nice to have a red cross or green tick depending on DEAD or ALIVE */}
-                ❌✅  
+              <span role="img" aria-label="status-icon">
+                {/* it would be nice to have a red cross or green tick depending on DEAD or ALIVE */}
               </span>
-              Status
+              Status ❓
             </h4>
-            <p>{character.status}</p>
+            <p>
+              {statusIcon}
+              {character.status}
+            </p>
             <hr />
             <h4 className="title is-4">
-              <span role="img" aria-label="specices-icon">
-                ❓
-              </span>
-              Species
+              <span role="img" aria-label="specices-icon"></span>
+              Species 🔍
             </h4>
-            <hr />
             <p>{character.species}</p>
             <hr />
             <h4 className="title is-4">
-              <span role="img" aria-label="gender-icon">
-                ♀♂
-              </span>
-              Gender
+              <span role="img" aria-label="gender-icon"></span>
+              Gender ♀♂
             </h4>
-            <hr />
             <p>{character.gender}</p>
-            {/* we can also add Origin, Location and which episode they were in */}
+            <hr />
+            <h4 className="title is-4">
+              <span role="img" aria-label="origin-icon"></span>
+              Origin 🪐
+            </h4>
+            <p>{character.origin.name}</p>
+            <hr />
+            <h4 className="title is-4">
+              <span role="img" aria-label="episodes-icon"></span>
+              Number of Episodes 📺
+            </h4>
+            <p>{character.episode.length}</p>
+            <hr />
           </div>
         </div>
       </div>

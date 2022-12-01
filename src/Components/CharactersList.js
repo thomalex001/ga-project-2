@@ -6,7 +6,7 @@ const CharactersList = () => {
 
   useEffect(() => {
     getAllCharacters()
-      .then((res) => setCharacters(res.data))
+      .then((res) => setCharacters(res.data.results))
       .catch((err) => console.error(err));
   }, []);
 
@@ -17,9 +17,9 @@ const CharactersList = () => {
     <section className="section">
       <div className="container">
         <div className="column is-multitline">
-          {/* {characters.map((character) => (
-            // <CharactersCard key={character._id} {...character} />
-          ))} */}
+          {characters.map((character) => (
+            <CharactersCard key={character._id} {...character} />
+          ))}
         </div>
       </div>
     </section>

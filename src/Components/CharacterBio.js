@@ -1,56 +1,62 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { getCharacterBio } from '../lib/api'; //need to add in API component 
+import { getCharacterBio } from '../lib/api'; //need to add this in API ==> export const getCharacterBio = (characterId) => axios.get(`${BASE_URL}/${characterId}`);
 
 const CharacterBio = () => {
   const { id } = useParams();
   const [character, setCharacter] = useState(null);
-  console.log('test ID is', id);
+  console.log('console logging the ID =>', id);
   useEffect(() => {
     //call api to get single character
-    console.log('this is it');
-    getSingleCheese(id)
-      .then((res) => setCheese(res.data))
+    getCharacterBio(id)
+      .then((res) => setCharacter(res.data))
       .catch((err) => console.error(err));
   }, [id]);
+
+
+  if (character === null) {
+    return <p>Loading...</p>;
+  }
+
 
   return (
     <section className="section">
       <div className="container">
-        <h2 className="title has-text-centered">{cheese.name}</h2>
+        <h2 className="title has-text-centered">{character.name}</h2>
         <hr />
         <div className="columns">
           <div className="column is-half">
             <figure className="image">
-              <img src={cheese.image} alt={cheese.name} />
+              <img src={character.image} alt={character.name} />
             </figure>
           </div>
           <div className="column is-half">
             <h4 className="title is-4">
-              <span role="img" aria-label="plate">
-                🍽
+              <span role="img" aria-label="status-icon"> {/* it would be nice to have a red cross or green tick depending on DEAD or ALIVE */}
+                ❌✅  
               </span>
-              Tasting Notes
+              Status
             </h4>
-            <p>{cheese.tastingNotes}</p>
+            <p>{character.status}</p>
             <hr />
             <h4 className="title is-4">
-              <span role="img" aria-label="globe">
-                🌍
+              <span role="img" aria-label="specices-icon">
+                ❓
               </span>
-              Origin
+              Species
             </h4>
             <hr />
-            <p>{cheese.origin}</p>
+            <p>{character.species}</p>
             <hr />
             <h4 className="title is-4">
-              <span role="img" aria-label="wave">
-                🖐
+              <span role="img" aria-label="gender-icon">
+                ♀♂
               </span>
-              Added By
+              Gender
             </h4>
             <hr />
-            <p>{cheese.user.username}</p>
+            <p>{character.gender}</p>
+            {/* we can also add Origin, Location and which episode they were in */}
           </div>
         </div>
       </div>
@@ -58,4 +64,4 @@ const CharacterBio = () => {
   );
 };
 
-export default CheeseShow;
+export default CharacterBio;

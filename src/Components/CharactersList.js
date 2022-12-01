@@ -19,8 +19,13 @@ const CharactersList = () => {
       <div className="container">
         <div className="column is-multitline">
           {characters.map((character) => (
-            <CharactersCard key={character.id} name={character.name} image={character.image}/>
-            
+            <CharactersCard
+              key={character.id}
+              id={character.id}
+              name={character.name}
+              image={character.image}
+              
+            />
           ))}
         </div>
       </div>

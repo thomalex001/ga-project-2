@@ -1,37 +1,33 @@
-import { getAllEpisodes, getAllCharacters } from '../lib/api';
+import { getAllEpisodes } from '../lib/api';
 import { useEffect, useState } from 'react';
 import EpisodesCard from './EpisodesCard';
-import CharactersCard from './CharactersCard';
 
 const EpisodesList = () => {
   const [episodes, setEpisodes] = useState(null);
-  const [characters, setCharacters] = useState(null);
+  const [page, setPage] = useState(1);
 
   useEffect(() => {
     getAllEpisodes(page)
       .then((res) => setEpisodes(res.data.results))
       .catch((err) => console.error(err));
-    getAllCharacters()
-      .then((res) => setCharacters(res.data.results))
-      .catch((err) => console.error(err));
-  }, []);
-
-  if (characters === null) {
-    return <p>Loading...</p>;
-  }
+  }, [page]);
 
   if (episodes === null) {
     return <p>Loading...</p>;
   }
 
-  const charactersUrl = characters.map((character) => {
-    const characterUrl = character.url;
-    console.log('just characters', characterUrl);
-  });
-  const episodesCharactersUrl = episodes.map((episode) => {
-    const episodeCharacterUrl = episode.characters;
-    console.log('episodes characters', Object.values(episodeCharacterUrl));
-  });
+  const incrementPage = () => {
+    if (page >= 3) {
+      return (page = 3);
+    }
+    setPage(page + 1);
+  };
+  const decrementPage = () => {
+    if (page <= 1) {
+      return (page = 1);
+    }
+    setPage(page - 1);
+  };
 
   return (
     <section className="section">
@@ -69,7 +65,7 @@ const EpisodesList = () => {
               name={episode.name}
               airDate={episode.air_date}
               episodeNumber={episode.episode}
-              episodeCharacters={episode.characters[0]}
+              characters={episode.characters}
             />
           ))}
         </div>

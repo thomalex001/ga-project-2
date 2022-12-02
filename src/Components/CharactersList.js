@@ -10,7 +10,7 @@ const CharactersList = () => {
       .then((res) => setCharacters(res.data.results))
       .catch((err) => console.error(err));
   }, []); 
-
+  
   if (characters === null) {
     return <p>Loading...</p>;
   }

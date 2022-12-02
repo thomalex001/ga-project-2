@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { getCharacterBio } from '../lib/api'; //need to add this in API ==> export const getCharacterBio = (characterId) => axios.get(`${BASE_URL}/${characterId}`);
+import { getCharacterBio } from '../lib/api'; 
 let statusIcon;
 
 const CharacterBio = () => {
@@ -20,8 +20,10 @@ const CharacterBio = () => {
 
   if (character.status === 'Alive') {
     statusIcon = '🟢';
-  } else {
+  } else if (character.status === 'Dead') {
     statusIcon = '☠️';
+  } else {
+    statusIcon = '🤷';
   }
 
   return (
@@ -38,7 +40,6 @@ const CharacterBio = () => {
           <div className="column is-half">
             <h4 className="title is-4">
               <span role="img" aria-label="status-icon">
-                {/* it would be nice to have a red cross or green tick depending on DEAD or ALIVE */}
               </span>
               Status ❓
             </h4>

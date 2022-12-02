@@ -26,4 +26,3 @@ const CharactersCard = ({ name, image, origin, id }) => (
   </div>
 );
 export default CharactersCard;
-

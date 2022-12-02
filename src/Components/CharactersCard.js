@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
 
-const CharactersCard = ({ name, image, origin, _id }) => (
+const CharactersCard = ({ name, image, origin, id }) => (
   <div className="column is-one-quarter-desktop is-one-third-tablet is-half-mobile">
-    <Link to={`/characters/${_id}`}>
+    <Link to={`/list/${id}`}>
       <div className="card">
         <div className="card-header">
           <h4 className="card-header-title">{name}</h4>
@@ -26,3 +26,4 @@ const CharactersCard = ({ name, image, origin, _id }) => (
   </div>
 );
 export default CharactersCard;
+

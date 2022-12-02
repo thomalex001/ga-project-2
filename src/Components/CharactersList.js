@@ -21,8 +21,15 @@ const CharactersList = () => {
           {characters.map((character) => (
             <CharactersCard
               key={character.id}
+<<<<<<< HEAD
               name={character.name}
               image={character.image}
+=======
+              id={character.id}
+              name={character.name}
+              image={character.image}
+              
+>>>>>>> fc3b2c23d38196383004d46540e9be5ea3aa932e
             />
           ))}
         </div>

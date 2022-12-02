@@ -13,7 +13,6 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="*" element={<p>This is not a valid route</p>} />
       </Routes>
-      <Pagination path="/pages" />
     </BrowserRouter>
   );
 };

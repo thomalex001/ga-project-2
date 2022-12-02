@@ -10,7 +10,7 @@ const CharactersList = () => {
     getAllCharacters(page)
       .then((res) => setCharacters(res.data.results))
       .catch((err) => console.error(err));
-  }, [page]);
+  }, []);
 
   if (characters === null) {
     return <p>Loading...</p>;

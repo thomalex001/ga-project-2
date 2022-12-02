@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './Components/Home';
 import Navbar from './Components/Navbar';
 import CharactersList from './Components/CharactersList';
+import Pagination from './Components/Pagination2';
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="*" element={<p>This is not a valid route</p>} />
       </Routes>
+      <Pagination path="/pages" />
     </BrowserRouter>
   );
 };

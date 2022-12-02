@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { getCharacterBio } from '../lib/api'; 
+import { getCharacterBio } from '../lib/api';
 let statusIcon;
 
 const CharacterBio = () => {
@@ -39,8 +39,7 @@ const CharacterBio = () => {
           </div>
           <div className="column is-half">
             <h4 className="title is-4">
-              <span role="img" aria-label="status-icon">
-              </span>
+              <span role="img" aria-label="status-icon"></span>
               Status ❓
             </h4>
             <p>

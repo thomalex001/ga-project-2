@@ -13,7 +13,7 @@ const EpisodesCard = ({ name, airDate, episodeNumber, episodeCharacters }) => (
         <h4 className="">{episodeNumber}</h4>
       </div>
       <div className="card-content">
-        <img className=""src={episodeCharacters} />
+        <img className="" src={episodeCharacters} />
       </div>
     </div>
   </div>

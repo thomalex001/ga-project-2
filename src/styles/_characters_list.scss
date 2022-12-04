@@ -1,5 +1,23 @@
 .section{
+  background-color: rgb(24, 73, 53);
+}
+.column {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap
+}
+.card {
+  background-color: rgb(9, 52, 17);
+  box-shadow: 5px 5px 5px rgb(0, 0, 0);
+  border-radius: 10px;
+}
+.image {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+h4.card-header-title {
+  color: white;
 }
 .page-top-div{
 display: flex;
@@ -53,6 +71,9 @@ button {
 
 .page-num {
 font-size: large;
+color: white;
+margin-left: 5px;
+margin-right: 5px; 
 }
 
 .portalimg {

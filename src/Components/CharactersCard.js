@@ -5,10 +5,10 @@ const CharactersCard = ({ name, image, origin, id }) => (
     <Link to={`/list/${id}`}>
       <div className="card">
         <div className="card-header">
-          <h4 className="card-header-title">{name}</h4>
+          <h4 className="card-header-title has-text-centered">{name}</h4>
         </div>
         <div className="card-image">
-          <figure className="image image is-1by1">
+          <figure className="image">
             <img
               src={image}
               alt={name}

@@ -27,17 +27,16 @@ const CharacterBio = () => {
   }
 
   return (
-    <section className="section">
-      <div className="container">
+    <section className="bio-section">
+      <div className="bio-container">
         <h2 className="title has-text-centered">{character.name}</h2>
-        <hr />
-        <div className="columns">
-          <div className="column is-half">
+        <div className="bio-columns">
+          <div className="bio-column is-half">
             <figure className="image">
               <img src={character.image} alt={character.name} />
             </figure>
           </div>
-          <div className="column is-half">
+          <div className="bio-column is-half">
             <h4 className="title is-4">
               <span role="img" aria-label="status-icon"></span>
               Status ❓
@@ -46,31 +45,26 @@ const CharacterBio = () => {
               {statusIcon}
               {character.status}
             </p>
-            <hr />
             <h4 className="title is-4">
               <span role="img" aria-label="specices-icon"></span>
               Species 🔍
             </h4>
             <p>{character.species}</p>
-            <hr />
             <h4 className="title is-4">
               <span role="img" aria-label="gender-icon"></span>
               Gender ♀♂
             </h4>
             <p>{character.gender}</p>
-            <hr />
             <h4 className="title is-4">
               <span role="img" aria-label="origin-icon"></span>
               Origin 🪐
             </h4>
             <p>{character.origin.name}</p>
-            <hr />
             <h4 className="title is-4">
               <span role="img" aria-label="episodes-icon"></span>
               Number of Episodes 📺
             </h4>
             <p>{character.episode.length}</p>
-            <hr />
           </div>
         </div>
       </div>

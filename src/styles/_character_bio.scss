@@ -16,12 +16,14 @@ h4.title.is-4{
     color: white;
     margin: 10px 5px 0px 0px;
     font-family: 'Gloria Hallelujah', cursive;
+    margin-bottom: 5px;
+    font-size: 20px
   }
 .bio-columns {
   display: flex;
   justify-content: center;
   background-color: rgb(9, 52, 17);
-  width: 600px;
+  width: 640px;
   border-radius: 10px;
   box-shadow: 5px 5px 5px black;
   .image {
@@ -34,4 +36,7 @@ h4.title.is-4{
   .hr {
     margin: 0
   }
+}
+.bio-column {
+  padding: 10px
 }

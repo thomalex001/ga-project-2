@@ -57,14 +57,14 @@ const EpisodesList = () => {
             </div>
           </div>
         </div>
-        <div className="column is-multitline">
+        <div className="episode-column is-multitline">
           {episodes.map((episode) => (
             <EpisodesCard
               key={episode.id}
               id={episode.id}
+              episodeNumber={episode.episode}
               name={episode.name}
               airDate={episode.air_date}
-              episodeNumber={episode.episode}
               characters={episode.characters}
             />
           ))}

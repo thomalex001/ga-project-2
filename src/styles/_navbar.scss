@@ -1,12 +1,15 @@
 .navbar {
-  background-color: rgb(169, 211, 233);
+  background-image: url(../images/3.png);
+  background-repeat: no-repeat;
+  background-position-x: center;
 }
 
 .navbar-container {
-  background-color: rgb(210, 201, 184);
+  background-color: rgb(169, 211, 233);
   font-weight: bold;
 }
 
 .navbar-item {
-  color: white;
+  color: rgb(0, 0, 0);
+  font-family: 'Gloria Hallelujah', cursive;
 }

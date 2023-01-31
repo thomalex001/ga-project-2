@@ -15,18 +15,23 @@ const EpisodesCard = ({ name, airDate, episodeNumber, characters }) => {
   }, []);
 
   return (
-    <div className="column is-one-quarter-desktop is-one-third-tablet is-half-mobile">
-      <div className="card">
-        <div className="episode-card-header">
-          <div className="episode-card-content">
-            <h4 className="episode-header">{episodeNumber}</h4>
-            <h4 className="episode-info">{name}</h4>
-            <h4 className="episode-air-date">First air date: </h4>
-            <h4 className="episode-info">{airDate}</h4>
+    <div className='column is-one-quarter-desktop is-one-third-tablet is-half-mobile'>
+      <div
+        className='card'
+        style={{ minHeight: '430px' }}>
+        <div className='episode-card-header'>
+          <div className='episode-card-content'>
+            <h4 className='episode-header'>{episodeNumber}</h4>
+            <h4 className='episode-info'>{name}</h4>
+            <h4 className='episode-air-date'>First air date: </h4>
+            <h4 className='episode-info'>{airDate}</h4>
           </div>
         </div>
-        <div className="card-content">
-          <img src={displayCharacter} alt={`character from ${name}`} />
+        <div className='card-content'>
+          <img
+            src={displayCharacter}
+            alt={`character from ${name}`}
+          />
         </div>
       </div>
     </div>

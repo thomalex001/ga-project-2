@@ -1,6 +1,7 @@
 import { getAllEpisodes } from '../lib/api';
 import { useEffect, useState } from 'react';
 import EpisodesCard from './EpisodesCard';
+import PortalImg from '../images/portal_img.png';
 
 const EpisodesList = () => {
   const [episodes, setEpisodes] = useState(null);
@@ -30,34 +31,40 @@ const EpisodesList = () => {
   };
 
   return (
-    <section className="section">
-      <div className="container">
-        <div className="page-top-div">
-          <div className="page-top">
-            <button className="dec" onClick={decrementPage}>
+    <section className='section'>
+      <div className='container'>
+        <div className='page-top-div'>
+          <div className='page-top'>
+            <button
+              style={{ cursor: 'pointer' }}
+              className='dec'
+              onClick={decrementPage}>
               ➡
             </button>
-            <div className="portal1">
+            <div className='portal1'>
               <img
-                className="portalimg"
-                src="https://www.pngkey.com/png/full/3-36968_rick-and-morty-portal-edible-printing-rick-and.png"
-                alt="portal"
+                className='portalimg'
+                src={PortalImg}
+                alt='portal'
               />
             </div>
-            <p className="page-num">Page:{page}/3</p>
-            <button className="inc" onClick={incrementPage}>
+            <p className='page-num'>Page:{page}/3</p>
+            <button
+              style={{ cursor: 'pointer' }}
+              className='inc'
+              onClick={incrementPage}>
               ➡
             </button>
-            <div className="portal2">
+            <div className='portal2'>
               <img
-                className="portalimg"
-                src="https://www.pngkey.com/png/full/3-36968_rick-and-morty-portal-edible-printing-rick-and.png"
-                alt="portal"
+                className='portalimg'
+                src={PortalImg}
+                alt='portal'
               />
             </div>
           </div>
         </div>
-        <div className="episode-column is-multitline">
+        <div className='episode-column is-multitline'>
           {episodes.map((episode) => (
             <EpisodesCard
               key={episode.id}
@@ -69,27 +76,33 @@ const EpisodesList = () => {
             />
           ))}
         </div>
-        <div className="page-bottom-div">
-          <div className="page-bottom">
-            <button className="dec" onClick={decrementPage}>
+        <div className='page-bottom-div'>
+          <div className='page-bottom'>
+            <button
+              style={{ cursor: 'pointer' }}
+              className='dec'
+              onClick={decrementPage}>
               ➡
             </button>
-            <div className="portal1">
+            <div className='portal1'>
               <img
-                className="portalimg"
-                src="https://www.pngkey.com/png/full/3-36968_rick-and-morty-portal-edible-printing-rick-and.png"
-                alt="portal"
+                className='portalimg'
+                src={PortalImg}
+                alt='portal'
               />
             </div>
-            <p className="page-num">Page:{page}/3</p>
-            <button className="inc" onClick={incrementPage}>
+            <p className='page-num'>Page:{page}/3</p>
+            <button
+              style={{ cursor: 'pointer' }}
+              className='inc'
+              onClick={incrementPage}>
               ➡
             </button>
-            <div className="portal2">
+            <div className='portal2'>
               <img
-                className="portalimg"
-                src="https://www.pngkey.com/png/full/3-36968_rick-and-morty-portal-edible-printing-rick-and.png"
-                alt="portal"
+                className='portalimg'
+                src={PortalImg}
+                alt='portal'
               />
             </div>
           </div>

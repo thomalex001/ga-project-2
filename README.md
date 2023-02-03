@@ -24,7 +24,7 @@ Once the project is cloned onto your machine, follow these steps:
 * Bulma library
 
 ## Timeframe 
-This was a pair programing hackathlon using GitHub/Zoom/Slack and Visual Studio Code with one of my fellow classmate Joel Sahiti, to be completed in 48hrs.
+This was a pair programing hackathlon with one of my fellow classmate Joel Sahiti using GitHub/Zoom/Slack and Visual Studio Code, to be completed in 48hrs
 
 ## Technologies Used
 * Excalidraw (wireframe)
@@ -78,7 +78,6 @@ This was a pair programing hackathlon using GitHub/Zoom/Slack and Visual Studio 
 ### Characters List:
 ![screenshot_index.png](./src/images/screenshot_index.png "")
 
-* React
   * Created the NavBar (Joel)
   * Created Home and Characters List buttons. (Joel)
   * Created Characters List page and fetched data from API. (Alex)
@@ -90,28 +89,33 @@ show all characters. (Joel)
 ### Characters Bio:
 ![screenshot_characters.png](./src/images/screenshot_characters.png "")
 
-* React
   * Created Characters Bio page and fetched data from API. (Alex)
   * Maniuplated data to show a different icon for Characters Status depending on result. (Alex)
-  * Manipulated data to show how number of episodes for each character. (Alex)
+
+### Episodes List:
+![screenshot_episodes.png](./src/images/screenshot_episodes.png "")
+
   * Created Episodes List Page. As we did not have images of each episodes, we decided
-  to show random images of characters who appeared in that specific episode (Alex)
+  to show random images of characters who appeared in that specific episode (Alex/Joel)
+  * Manipulated data to show how number of episodes for each character. (Alex)
   * Added syling to Navbar and Homepage. (Joel)
   * Added styling to Characters List and Bio. (Alex)
   * Deployed the project onto Netflify (Alex/Joel)
 
-### Episodes List
-![screenshot_episodes.png](./src/images/screenshot_episodes.png "")
 
 ## Challenges
-
+* Using Git/GitHub for the first time as a tool to collaborate slowed us down at the start however with some practice, we speeded up the process and reduced the amount of merging conflicts considerably.
+* Using a CSS library for the first time also slowed down the styling of our app as we had
+to read the documentation.
 
 ## Wins
-* 
-
+* As our first project involving back-end programming and fetching and API, the process was highly enjoyable and our communication really helped getting things done in time.
+* Use of CSS library made our styling simpler even though we lost valuable time in the process of reading the documentation.
 
 ## Key Learning/Takeways
-*
+* Pair-Programming 
+* API fetching
+* Use of Bulma (CSS library) for the first time 
 
 ## Bugs
 ![screenshot_card_error.png](./src/images/screenshot_card_error.png "")
@@ -119,10 +123,12 @@ show all characters. (Joel)
 * In the Episodes List page above, when an image does not load, the image `alt` is showed, however, what should show is a generic image such as the example below for Characters Card.
 
 ![screenshot_card.png](./src/images/screenshot_card.png "")
-* 
+
 
 ## Future Improvements
 * Adding a condition in which second image is loaded onto a card if the fist image link is invalid.
+* Adding a search function to the Navbar
 
 
 ## THANKS FOR READING!
+

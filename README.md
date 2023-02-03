@@ -14,9 +14,9 @@ This app consumes a public Rick And Morty API which contains Characters, Episode
 
 ## Getting Started/Code Installation
 Once the project is cloned onto your machine, follow these steps:
-1. In the Project terminal, run the command `npm i react axios`
-2. Then run the command `npm start`
-3. Your default brower will open a new page and load the app
+1. In the Project terminal, run the command `npm i react axios`.
+2. Then run the command `npm start`.
+3. Your default brower will open a new page and load the app.
 
 ### Dependencies
 * Axios packages
@@ -24,7 +24,7 @@ Once the project is cloned onto your machine, follow these steps:
 * Bulma library
 
 ## Timeframe 
-This was a pair programing hackathlon with one of my fellow classmate Joel Sahiti using GitHub/Zoom/Slack and Visual Studio Code, to be completed in 48hrs
+This was a pair programing hackathlon with one of my fellow classmate Joel Sahiti using GitHub/Zoom/Slack and Visual Studio Code, to be completed in 48hrs.
 
 ## Technologies Used
 * Excalidraw (wireframe)
@@ -56,9 +56,9 @@ This was a pair programing hackathlon with one of my fellow classmate Joel Sahit
 ![screenshot_wireframe.png](./src/images/screenshot_wireframe.png "")
 
 * Used Excalidraw to build a wireframe and design the basic layout of the app.
-  * The wireframe shows 4 pages: Homepage, Characters List, Characters Card, Episodes List
-  * A navigation bar is used to navigate between each main pages
-  * One the Characters List page, if the user clicks on a Character's Card, he is directed
+  * The wireframe shows 4 pages: Homepage, Characters List, Characters Card, Episodes List.
+  * A navigation bar is used to navigate between each main pages.
+  * One the Characters List page, if the user clicks on a Character's Card, he is directed.
   to a new page with the Character's card in the center of the screen and added information about him.
 * Research an API with enough content to create a minimum of 3 pages.
 
@@ -77,7 +77,23 @@ This was a pair programing hackathlon with one of my fellow classmate Joel Sahit
 
 ### Characters List:
 ![screenshot_index.png](./src/images/screenshot_index.png "")
+  * Created the `api.js` with the code (below) to fetch the required data based on our wireframe. (Alex/Joel)
+  ```javascript
+  import axios from 'axios';
 
+  const BASE_URL = 'https://rickandmortyapi.com/api/character';
+  const EPISODE_URL = 'https://rickandmortyapi.com/api/episode';
+
+  export const getAllEpisodes = (pageNumber) =>
+    axios.get(`${EPISODE_URL}/?page=${pageNumber}`);
+
+  export const getAllCharacters = (pageNumber) =>
+    axios.get(`${BASE_URL}/?page=${pageNumber}`);
+
+  export const getCharacterBio = (characterId) =>
+  axios.get(`${BASE_URL}/${characterId}`);
+
+  ```
   * Created the NavBar (Joel)
   * Created Home and Characters List buttons. (Joel)
   * Created Characters List page and fetched data from API. (Alex)
@@ -96,8 +112,23 @@ show all characters. (Joel)
 ![screenshot_episodes.png](./src/images/screenshot_episodes.png "")
 
   * Created Episodes List Page. As we did not have images of each episodes, we decided
-  to show random images of characters who appeared in that specific episode (Alex/Joel)
-  * Manipulated data to show how number of episodes for each character. (Alex)
+  to show random images of characters who appeared in that specific episode, see code below  (Alex/Joel)
+  ```javascript
+  import axios from 'axios';
+  import { useState, useEffect } from 'react';
+
+  const randomCharacter =
+    characters[Math.ceil(Math.random() * characters.length)];
+
+  useEffect(() => {
+    axios.get(randomCharacter).then((res) => {
+      console.log({ res });
+      setDisplayCharacter(res.data.image);
+    });
+  }, []); 
+  ```
+
+  * Manipulated data to show how number of episodes for each character.(Alex)
   * Added syling to Navbar and Homepage. (Joel)
   * Added styling to Characters List and Bio. (Alex)
   * Deployed the project onto Netflify (Alex/Joel)

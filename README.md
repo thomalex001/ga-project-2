@@ -35,7 +35,7 @@ This was a pair programing hackathlon with one of my fellow classmate Joel Sahit
 * Git/GitHub
 * Axios packages
 * CORS packages
-* Bulma (SCSS library)
+* Bulma (SASS library)
 * Google Fonts
 * Zoom
 * Slack
@@ -58,9 +58,9 @@ This was a pair programing hackathlon with one of my fellow classmate Joel Sahit
 * Used Excalidraw to build a wireframe and design the basic layout of the app.
   * The wireframe shows 4 pages: Homepage, Characters List, Characters Card, Episodes List.
   * A navigation bar is used to navigate between each main pages.
-  * One the Characters List page, if the user clicks on a Character's Card, he is directed.
-  to a new page with the Character's card in the center of the screen and added information about him.
-* Research an API with enough content to create a minimum of 3 pages.
+  * On the Characters List page, if the user clicks on a Character's Card, he is directed.
+  to a new page which contains the Character's full bio card. 
+* Researched an API with enough content to create a minimum of 3 pages.
 
 ## Build/Code Process
 
@@ -72,7 +72,7 @@ This was a pair programing hackathlon with one of my fellow classmate Joel Sahit
   * Installed Axios Packages and Bulma library. (Alex/Joel)
 
 * Excalidraw  
-  * Created a wireframe with each pages/components required of the app. (Alex/Joel)
+  * Created a wireframe with each pages/components required for the app. (Alex/Joel)
   * API research (Alex/Joel)
 
 ### Characters List:
@@ -95,9 +95,9 @@ This was a pair programing hackathlon with one of my fellow classmate Joel Sahit
 
   ```
   * Created the NavBar (Joel)
-  * Created Home and Characters List buttons. (Joel)
+  * Created Home and Characters List buttons on the NavBar. (Joel)
   * Created Characters List page and fetched data from API. (Alex)
-  * As our API is only showing 20 characters per page, created pages button to 
+  * As our API was only showing 20 characters per page, we created pagination to 
 show all characters. (Joel)
 
 ### Day Two
@@ -107,6 +107,7 @@ show all characters. (Joel)
 
   * Created Characters Bio page and fetched data from API. (Alex)
   * Maniuplated data to show a different icon for Characters Status depending on result. (Alex)
+    * for example, if the Character's Status is "Alive", ✅ icon appears, however if he is "Dead" the icon ☠️ is showed.
 
 ### Episodes List:
 ![screenshot_episodes.png](./src/images/screenshot_episodes.png "")
@@ -128,7 +129,7 @@ show all characters. (Joel)
   }, []); 
   ```
 
-  * Manipulated data to show how number of episodes for each character.(Alex)
+  * Manipulated data to show the number of episodes each characters appeared on.(Alex)
   * Added syling to Navbar and Homepage. (Joel)
   * Added styling to Characters List and Bio. (Alex)
   * Deployed the project onto Netflify (Alex/Joel)
@@ -140,8 +141,8 @@ show all characters. (Joel)
 to read the documentation.
 
 ## Wins
-* As our first project involving back-end programming and fetching and API, the process was highly enjoyable and our communication really helped getting things done in time.
-* Use of CSS library made our styling simpler even though we lost valuable time in the process of reading the documentation.
+* This was our first project involving back-end programming and fetching and API, the process was highly enjoyable and our communication really helped getting things done in time.
+* The use of CSS library made our styling simpler even though we lost valuable time in the process of reading the documentation.
 
 ## Key Learning/Takeways
 * Pair-Programming 

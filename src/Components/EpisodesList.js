@@ -12,11 +12,10 @@ const EpisodesList = () => {
       .then((res) => setEpisodes(res.data.results))
       .catch((err) => console.error(err));
   }, [page]);
-
   if (episodes === null) {
     return <p>Loading...</p>;
   }
-
+  
   const incrementPage = () => {
     if (page >= 3) {
       return (page = 3);

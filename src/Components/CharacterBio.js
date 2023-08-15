@@ -1,23 +1,21 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getCharacterBio } from '../lib/api';
+
 let statusIcon;
 
 const CharacterBio = () => {
   const { id } = useParams();
   const [character, setCharacter] = useState(null);
-  console.log('console logging the ID =>', id);
   useEffect(() => {
     //call api to get single character
     getCharacterBio(id)
       .then((res) => setCharacter(res.data))
       .catch((err) => console.error(err));
   }, [id]);
-
   if (character === null) {
     return <p>Loading...</p>;
   }
-
   if (character.status === 'Alive') {
     statusIcon = '🟢';
   } else if (character.status === 'Dead') {

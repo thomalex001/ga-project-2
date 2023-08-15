@@ -24,7 +24,7 @@ Once the project is cloned onto your machine, follow these steps:
 * Bulma library
 
 ## Timeframe 
-This was a pair programing hackathlon with one of my fellow classmate Joel Sahiti using GitHub/Zoom/Slack and Visual Studio Code, to be completed in 48hrs.
+This was a pair programing hackathlon with one of my fellow classmate [Joel Sahiti](https://github.com/JoelSsssss) using GitHub/Zoom/Slack and Visual Studio Code, to be completed in 48hrs.
 
 ## Technologies Used
 * Excalidraw (wireframe)
